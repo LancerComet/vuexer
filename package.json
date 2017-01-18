@@ -19,6 +19,10 @@
     "vue": "^1.0.21",
     "vuex": "^1.0.0-rc.2"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LancerComet/vuexer.git"
+  },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "babel-core": "^6.0.0",

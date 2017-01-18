@@ -10,16 +10,14 @@ Setup.
 import Vue from 'vue'
 import Vuexer from 'vuexer'
 
-const vuexPath = {
-  store: path.resolve(__dirname, '../vuex/store.js'),
-  actions: path.resolve(__dirname, '../vuex/actions.js'),
-  getters: path.resolve(__dirname, '../vuex/getters.js')
-}
+import store from './vuex/store'
+import actions from './vuex/store'
+import getters from './vuex/store'
 
 Vue.use(Vuexer, {
-  store: vuexPath.store,
-  actions: vuexPath.actions,
-  getters: vuexPath.getters
+  store,
+  actions,
+  getters
 })
 ```
 
