@@ -11,8 +11,8 @@ import Vue from 'vue'
 import Vuexer from 'vuexer'
 
 import store from './vuex/store'
-import actions from './vuex/store'
-import getters from './vuex/store'
+import actions from './vuex/actions'
+import getters from './vuex/getters'
 
 Vue.use(Vuexer, {
   store,
