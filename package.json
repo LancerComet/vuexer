@@ -1,7 +1,7 @@
 {
   "name": "vuexer",
   "version": "0.1.1",
-  "description": "Transport data between component and vuex in whole project. Only for Vue 1.",
+  "description": "Transport data between component and vuex in whole project.",
   "main": "src/index.js",
   "keywords": [
     "vuex",

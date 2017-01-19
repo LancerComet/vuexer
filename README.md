@@ -1,6 +1,8 @@
 # Vuexer
 
-> Transport data between vuex and components in whole project.
+Transport data between vuex and components in whole project.
+
+It is useful when your components are used in different projects.
 
 ## Quick Start.
 
