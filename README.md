@@ -1,12 +1,14 @@
 # Vuexer
 
-Transport data between vuex and components in whole project.
+Add a new properity `$vuexer` in your components.
 
-It is useful when your components are used in different projects.
+It is useful when your `npm vue components` are designed to use vuex and are used in different projects.
+
+Only for Vue 1.0, because "Vue 2.0 + Vuex 2.0" has solved this problem.
 
 ## Quick Start.
 
-Setup.
+Use vuexer firstly.
 
 ```javascript
 import Vue from 'vue'
@@ -16,6 +18,7 @@ import store from './vuex/store'
 import actions from './vuex/actions'
 import getters from './vuex/getters'
 
+// Initialization.
 Vue.use(Vuexer, {
   store,
   actions,
@@ -23,17 +26,11 @@ Vue.use(Vuexer, {
 })
 ```
 
-Usage.
+When vuexer is initialized, a new properity called `$vuexer` will be added to your components.
+
+Let's see:
 
 ```html
-<template>
-  <!-- "getCurrency" is the getter that you defined in your vuex getters. -->
-  <p>currency: {{$vuexer.getCurrency}}</p>
-  <div>
-    <button @click="setCurrency(10)">Set my money to 10</button>
-  </div>
-</template>
-
 <script>
   export default {
     methods: {
@@ -43,6 +40,16 @@ Usage.
     }
   }
 </script>
+
+<template>
+  <!-- "getCurrency" is the getter that you have defined in your vuex getters. -->
+  <p>currency: {{$vuexer.getCurrency}}</p>
+  <div>
+    <button @click="setCurrency(10)">I need $10!</button>
+    <!-- Or you can also: -->
+    <button @click="$vuexer.setCurrency(100)">$100 is required!</button>
+  </div>
+</template>
 ```
 
 ## License
