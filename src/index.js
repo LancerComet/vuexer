@@ -6,15 +6,13 @@
    * @license: MIT.
    */
 
-let inited = false
-
 const vuexer = {
-  install (Vue, options) {
-    if (!options || !options.store || !options.actions || !options.getters) {
+  install: function (Vue, options) {
+    if (!options || !options.store) {
       window.console && console.warn('[Vuexer] You must provide Vuex modules for Vuexer initialization.')
       return
     }
-    if (!inited) {
+    if (!vuexer.installed) {
       const vm = new Vue({
         store: options.store,
         vuex: {
@@ -24,7 +22,6 @@ const vuexer = {
       })
       Vue.vuexer = vm
       Vue.prototype.$vuexer = vm
-      inited = true
     }
   }
 }
