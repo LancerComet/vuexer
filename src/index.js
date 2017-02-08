@@ -8,7 +8,7 @@
 
 'use strict'
 
-let installed = false
+var installed = false
 
 const vuexer = {
   install: function (Vue, options) {
