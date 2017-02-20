@@ -2,7 +2,7 @@
   "name": "vuexer",
   "version": "0.1.7",
   "description": "Transport data between component and vuex in whole project. Only for Vue 1.",
-  "main": "src/index.js",
+  "main": "dist/index.umd.js",
   "keywords": [
     "vuex",
     "vue"
@@ -12,11 +12,7 @@
     "email": "chw644@hotmail.com"
   },
   "scripts": {
-    "dev": "node build/utils/dev-server.js",
-    "build": "node build/utils/build.js",
-    "unit": "karma start test/unit/karma.conf.js --single-run",
-    "test": "npm run unit",
-    "lint": "eslint --ext .js,.vue src test/unit/specs"
+    "build": "node build.js"
   },
   "dependencies": {
     "vue": "^1.0.21",
