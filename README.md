@@ -2,7 +2,7 @@
 
 Add a new properity `$vuexer` in your components.
 
-It is useful when your `npm vue components` are designed to use vuex and are used in different projects.
+It is useful when your vue component uses vuex and you are going to distribute them as npm package and then use them in different projects.
 
 Only for Vue 1.0, because "Vue 2.0 + Vuex 2.0" has solved this problem.
 
