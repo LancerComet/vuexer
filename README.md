@@ -1,14 +1,17 @@
 # Vuexer
 
-Add a new properity `$vuexer` in your components.
+[![Vuexer](https://github.com/LancerComet/vuexer/workflows/Test/badge.svg)](https://github.com/LancerComet/vuexer/actions)
+[![npm version](https://badge.fury.io/js/vuexer.svg)](https://badge.fury.io/js/vuexer)
 
-It is useful when your vue component uses vuex and you are going to distribute them as npm package and then use them in different projects.
+## What's wrong with the "Vue 1 + Vuex 1"?
+
+If you want to distribute some vue 1 components to npm or somewhere else, and these components use Vuex 1 as its state manager, Vue 1 + Vuex 1 just can't do this.
+
+So this package is designed to solve this problem. It adds a new properity `$vuexer` in all vue components, so that you can use `$vuexer` as a bridge to communicate with each other.
 
 Only for Vue 1.0, because "Vue 2.0 + Vuex 2.0" has solved this problem.
 
-## Quick Start.
-
-Use vuexer firstly.
+## Quick Start
 
 ```javascript
 import Vue from 'vue'
@@ -18,7 +21,6 @@ import store from './vuex/store'
 import actions from './vuex/actions'
 import getters from './vuex/getters'
 
-// Initialization.
 Vue.use(Vuexer, {
   store,
   actions,
@@ -26,7 +28,7 @@ Vue.use(Vuexer, {
 })
 ```
 
-When vuexer is initialized, a new properity called `$vuexer` will be added to your components.
+After vuexer has been initialized, a new property called `$vuexer` will be added to your components.
 
 Let's see:
 
@@ -52,5 +54,10 @@ Let's see:
 </template>
 ```
 
+Now you want to have this code in your component, and you are going to distribute it to somewhere.
+
+Once a project uses this component, just make sure Vuexer is installed in this project and everything will be fine.
+
 ## License
-MIT.
+
+Apache-2.0

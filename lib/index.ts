@@ -1,17 +1,22 @@
-  /**
-   * Vue Jsonp By LancerComet at 16:35, 2016.10.17.
-   * # Carry Your World #
-   *
-   * @author: LancerComet
-   * @license: MIT.
-   */
+/**
+ * Transport data between vue components from npm package and project.
+ * Only for Vue 1.
+ *
+ * 2016.10.17 16:35.
+ * # Carry Your World #
+ *
+ * @author: LancerComet
+ * @license: Apache-2.0
+ */
 
-'use strict'
-
-var installed = false
+let installed = false
 
 const vuexer = {
-  install: function (Vue, options) {
+  install: (Vue: any, options: {
+    store: any
+    actions: any
+    getters: any
+  }) => {
     if (!options || !options.store) {
       window.console && console.warn('[Vuexer] You must provide Vuex modules for Vuexer initialization.')
       return
@@ -29,8 +34,7 @@ const vuexer = {
       Vue.prototype.$vuexer = vm
       installed = true
     }
-
   }
 }
 
-module.exports = vuexer
+export default vuexer
