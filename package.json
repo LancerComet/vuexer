@@ -21,6 +21,10 @@
     "name": "LancerComet",
     "email": "chw644@hotmail.com"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LancerComet/vuexer.git"
+  },
   "license": "Apache-2.0",
   "devDependencies": {
     "@types/jest": "^27.0.3",
